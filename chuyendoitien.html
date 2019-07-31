@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="amount">
+    <select id="from">
+        <option value="VND"> Việt Nam Đồng</option>
+        <option value="USD"> USD</option>
+    </select>
+    <select id="to">
+        <option value="VND"> Việt Nam Đồng</option>
+        <option value="USD"> USD</option>
+    </select>
+    <button onclick="convert()">convert</button>
+    <script>
+        let amount = document.getElementById("amount");
+        let from = document.getElementById("from");
+        let to = document.getElementById("to");
+        function convert() {
+                if (from.value == "USD" && to.value=="VND"){
+                    let result = amount.value* 23700;
+                    document.write("result: " + result);
+                }
+                else if (from.value == "VND" && to.value=="USD"){
+                    let result = amount.value/23700;
+                    document.write("result: " + result);
+                }
+
+        }
+    </script>
+
+</body>
+</html>
